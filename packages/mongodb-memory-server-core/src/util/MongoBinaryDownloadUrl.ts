@@ -313,7 +313,7 @@ export class MongoBinaryDownloadUrl implements MongoBinaryDownloadUrlOpts {
 
     if (release) {
       if (this.arch === 'aarch64') {
-        if (!/^8/.test(release)) {
+        if (!/^8|9/.test(release)) {
           throw new KnownVersionIncompatibilityError(
             `Rhel ${release}`,
             this.version,
